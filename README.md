@@ -66,8 +66,8 @@ git clone <URL-repo-GitHub> Web-App-Dev
 
 ### 3. Tạo database
 1. Mở phpMyAdmin: http://localhost/phpmyadmin
-2. Tạo database mới (ví dụ `forum_dangoai`, bảng mã `utf8mb4_unicode_ci`).
-3. Import `database/schema.sql`, sau đó các file trong `database/routines/` và (tuỳ chọn) `database/seeds/seed.sql`.
+2. Vào tab **Import**, chọn file `database/schema.sql` rồi bấm Thực hiện. File này tự tạo database `outdoor_forum`, 8 bảng, dữ liệu mẫu và các stored procedure.
+3. Nếu import lại từ đầu, hãy xóa database `outdoor_forum` trước (file không có `DROP`).
 
 ### 4. Cấu hình kết nối
 Mở `config/database.php` và điền thông tin kết nối:
@@ -77,7 +77,7 @@ Mở `config/database.php` và điền thông tin kết nối:
 return [
     'host' => 'localhost',   // hoặc IP Tailscale của máy host
     'port' => 3306,
-    'name' => 'forum_dangoai',
+    'name' => 'outdoor_forum',
     'user' => 'root',
     'pass' => '',
 ];
